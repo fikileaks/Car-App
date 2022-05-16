@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 import Navigation from '../components/Navigation'
@@ -57,28 +58,14 @@ export default function SearchResult() {
                 <p className='font-normal text-sm'>{category}</p>
                 {status === true ? <p className='font-normal text-sm'>tersedia</p> : <p className='font-normal text-sm'>tak tersedia</p>}
               </div>
-              <button className='px[auto] py-3 bg-green-500 text-white font-bold text-sm rounded-sm'>Pilih Mobil</button>
+              <button className='px[auto] py-3 bg-green-500 text-white font-bold text-sm rounded-sm'>
+                <Link to={'/result/' + id}>Pilih Mobil</Link>
+              </button>
             </li>
           ))}
         </ul>
       )}
       {!loading && error && <div>error mas browww</div>}
-      {/*     <div className=''>
-        <ul>
-          <li>
-            <div>
-              <img src='' alt='' />
-            </div>
-            <div>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <button></button>
-            </div>
-          </li>
-        </ul>
-      </div> */}
       <Footer />
     </>
   )

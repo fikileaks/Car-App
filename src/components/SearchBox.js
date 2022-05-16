@@ -9,7 +9,7 @@ const SearchBox = () => {
         <div>{/*<MyCombobox /> */}</div>
         <div>Pencarian</div>
         <button className='px-3 py-2 rounded-sm bg-green-600 hover:bg-opacity-80 text-sm font-bold text-white'>
-          <Link to='/'>Cari Mobil</Link>
+          <Link to='/result'>Cari Mobil</Link>
         </button>
       </div>
     </>
